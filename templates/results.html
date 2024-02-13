@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Godot 4 Documentation Search Results</title>
+</head>
+<body>
+<h1>Godot 4 Documentation Search Results</h1>
+<p>
+Your search term: {{ search_term }}
+</p>
+<ul>
+{% for result in results %}
+<li>
+<a href="/docs/{{ result.title | slugify }}">{{ result.title }}</a>
+<p>{{ result.description }}</p>
+</li>
+{% endfor %}
+</ul>
+</body>
+</html>
+
+
